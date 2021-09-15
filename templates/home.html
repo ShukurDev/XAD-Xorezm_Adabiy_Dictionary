@@ -1,0 +1,89 @@
+{% load static %}
+<DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Asosiy oyna
+		</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<link rel="stylsheet" type="text/css" href="{% static 'css/base.css' %}">
+    </head>
+	<body>
+		 <div>
+		 	<div class="alert alert-primary" role="alert" style="margin: 10px;">
+  				<h1 style="text-align: center;">Online Lug'at</h1>
+			</div>
+			<div class="container">
+  				<div class="row" style="background-color:rgb(118, 240, 193)">
+    				<div class="col alert alert-warning" style="margin: 10px;;">
+						<div class="spinner-grow text-success" role="status">
+							<span class="visually-hidden">Loading...</span>
+						  </div>
+						<h3 style="color: red">
+							Tezlik
+						</h3>
+    				</div>
+					<div class="col alert alert-warning" style="margin: 10px;">
+						<div class="spinner-grow text-warning" role="status">
+							<span class="visually-hidden">Loading...</span>
+						  </div>
+						<h3 style="color: red">
+							Qulaylik
+						</h3>
+    				</div>
+					<div class="col alert alert-warning" style="margin: 10px;">
+						<div class="spinner-grow text-info" role="status">
+							<span class="visually-hidden">Loading...</span>
+						  </div>
+						<h3 style="color: red">
+							Bepul
+						</h3>
+    				</div>
+  				</div>
+			</div>
+			<div class="card text-center" style="margin: 40px;">
+				<div class="card-header">
+				  <i>O'zbek tilidagi shevalar</i>
+				</div>
+				<div class="card-body" style="margin: 10px; padding: 20px;">
+				  <h2 style="color:rgb(21, 33, 209)" class="card-title"> Xorazmcha shevadan - Adabiy shevaga </h2>
+				  <p class="card-text"></p>
+				</div>
+				<div class="card-footer text-muted">
+					<nav class="navbar navbar-light bg-light"  style="text-align: center;">
+						<div class="container-fluid" >
+						  <form method="GET" action="/" class="d-flex" style="margin: 30px; width:100%; height: 40px;">
+							<input value="{{q}}" name = "q" class="form-control me-2" type="search" placeholder="So'z kiriting... " aria-label="Search">
+							<button class="btn btn-outline-success" type="submit">Qidirish</button>
+						  </form>
+						</div>
+						<table class="table table-success table-striped  table table-bordered" style="margin: 30px;">
+							<thead>
+							  <tr>
+								
+								<th scope="col">Xorazmchaa</th>
+								<th scope="col">Adabiy</th>
+							  </tr>
+							</thead>
+							<hr>
+							<tbody>
+								{% if natija %}
+								{% for tarjima in natija %}
+							  <tr>
+								<td class="shsh">{{ tarjima.xorazmcha.title }}</td>
+								<td>{{ tarjima.adabiy.title }}</td>
+							  </tr>
+							  {% endfor %}
+							  {% endif %}
+							</tbody>
+						  </table>
+					  </nav>
+				</div>
+			</div>
+			<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+		</div>
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</html>
