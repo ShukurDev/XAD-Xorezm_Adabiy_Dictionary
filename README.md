@@ -7,3 +7,6 @@ This can be used by anyone visiting the Khorezm region of Uzbekistan.'''
 
 # Disadvantages:
 *Not yet uploaded to Server*
+
+# View
+[Website link](https://xorazmcha-lugat.herokuapp.com/)
